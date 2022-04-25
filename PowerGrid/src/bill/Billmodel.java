@@ -38,7 +38,7 @@ public String insertItem(String cusname, String cusaccount, String date, String 
  // execute the statement
  preparedStmt.execute();
  con.close();
- output = "Inserted successfully";
+ output = "Bill Details Inserted successfully";
  }
  catch (Exception e)
  {
