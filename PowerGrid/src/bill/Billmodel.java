@@ -118,7 +118,7 @@ public String updateItem(String ID, String cusname, String cusaccount, String da
  // execute the statement
  preparedStmt.execute();
  con.close();
- output = "Updated successfully";
+ output = "Bill Details Updated successfully";
  }
  catch (Exception e)
  {
@@ -143,7 +143,7 @@ public String deleteItem(String Bill_ID)
  // execute the statement
  preparedStmt.execute();
  con.close();
- output = "Deleted successfully";
+ output = "Bill Deleted successfully";
  }
  catch (Exception e)
  {
