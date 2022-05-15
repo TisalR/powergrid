@@ -18,10 +18,10 @@
 		<div class="col-6">
 			<h1>Items Management4545</h1>
 			<form  id="formItem" name="formItem" >
-				 Item code: <input id="itemCode" name="itemCode" type="text" class="form-control form-control-sm"><br> 
-				 Item name: <input id="itemName" name="itemName" type="text" class="form-control form-control-sm"><br> 
-				 Item price: <input id="itemPrice" name="itemPrice" type="text" class="form-control form-control-sm"><br> 
-				 Item description: <input  id="itemDesc" name="itemDesc" type="text" class="form-control form-control-sm"><br> 
+				 Item code: <input id="Issue_name" name="issueName" type="text" class="form-control form-control-sm"><br> 
+				 Item name: <input id="Issue_Status" name="issueStatus" type="text" class="form-control form-control-sm"><br> 
+				 Item price: <input id="Date" name="Date" type="text" class="form-control form-control-sm"><br> 
+				 Item description: <input  id="Description" name="Description" type="text" class="form-control form-control-sm"><br> 
 			 	<input id="btnSave" name="btnSave" type="button" value="Save" class="btn btn-primary">
 			 	<input type="hidden" id="hidItemIDSave" name="hidItemIDSave" value="">
 			 	

@@ -44,10 +44,11 @@ $(document).on("click", "#btnSave", function(event)
 $(document).on("click", ".btnUpdate", function(event) 
 { 
  	 $("#hidItemIDSave").val($(this).data("itemid")); 
-	 $("#itemCode").val($(this).closest("tr").find('td:eq(0)').text()); 
-	 $("#itemName").val($(this).closest("tr").find('td:eq(1)').text()); 
-	 $("#itemPrice").val($(this).closest("tr").find('td:eq(2)').text()); 
-	 $("#itemDesc").val($(this).closest("tr").find('td:eq(3)').text()); 
+	 $("#Issue_name").val($(this).closest("tr").find('td:eq(0)').text()); 
+	 $("#Issue_Status").val($(this).closest("tr").find('td:eq(1)').text()); 
+	 $("#Date").val($(this).closest("tr").find('td:eq(2)').text()); 
+	 $("#Description").val($(this).closest("tr").find('td:eq(3)').text()); 
+	 $("#Location").val($(this).closest("tr").find('td:eq(3)').text()); 
 });
 
 $(document).on("click", ".btnRemove", function(event) 
@@ -69,36 +70,20 @@ $(document).on("click", ".btnRemove", function(event)
 // CLIENT-MODEL================================================================
 function validateItemForm() 
 { 
-	// CODE
-	if ($("#itemCode").val().trim() == "") 
-	 { 
-	 	return "Insert Item Code."; 
-	 } 
 	// NAME
-	if ($("#itemName").val().trim() == "") 
+	if ($("#Issue_name").val().trim() == "") 
 	 { 
-	 	return "Insert Item Name."; 
+	 	return "Insert Issue Name."; 
 	 } 
-	// PRICE-------------------------------
-	if ($("#itemPrice").val().trim() == "") 
+	// STATUS-------------------------------
+	if ($("#Issue_Status").val().trim() == "") 
 	 { 
-	 	return "Insert Item Price."; 
+	 	return "Insert Issue status."; 
 	 } 
-	 
-	// is numerical value
-	/* var tmpPrice = $("#itemPrice").val().trim(); 
-	if (!$.isNumeric(tmpPrice)) 
+	// DATE------------------------
+	if ($("#Date").val().trim() == "") 
 	 { 
-	 	return "Insert a numerical value for Item Price."; 
-	 } 
-	 
-	// convert to decimal price
-	 $("#itemPrice").val(parseFloat(tmpPrice).toFixed(2)); */
-	 
-	// DESCRIPTION------------------------
-	if ($("#itemDesc").val().trim() == "") 
-	 { 
-	 	return "Insert Item Description."; 
+	 	return "Insert Issue Date."; 
 	 } 
 	return true; 
 }

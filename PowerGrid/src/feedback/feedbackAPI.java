@@ -31,10 +31,10 @@ public class feedbackAPI extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String output = itemObj.insertItem(request.getParameter("itemCode"), 
-				 request.getParameter("itemName"), 
-				request.getParameter("itemPrice"), 
-				request.getParameter("itemDesc")); 
+		String output = itemObj.insertItem(request.getParameter("Issue_name"), 
+				 request.getParameter("Issue_Status"), 
+				request.getParameter("Date"), 
+				request.getParameter("Description")); 
 		
 		response.getWriter().write(output); 
 	}
@@ -68,10 +68,10 @@ public class feedbackAPI extends HttpServlet {
 		Map paras = getParasMap(request);
 		
 		String output = itemObj.updateItem(paras.get("hidItemIDSave").toString(), 
-										    paras.get("itemCode").toString(), 
-											paras.get("itemName").toString(), 
-											paras.get("itemPrice").toString(), 
-											paras.get("itemDesc").toString());
+										    paras.get("Issue_name").toString(), 
+											paras.get("Issue_Status").toString(), 
+											paras.get("Date").toString(), 
+											paras.get("Description").toString());
 		
 		response.getWriter().write(output); 
 
